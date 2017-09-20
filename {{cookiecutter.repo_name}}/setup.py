@@ -22,7 +22,7 @@ tests_require = (
 
 if __name__ == '__main__':
     setup(
-        name='{{cookiecutter.repo_name}}_stacks',
+        name='{{cookiecutter.repo_name}}',
         version='0.1.0',
         description='{{cookiecutter.description}}',
         install_requires=install_requires,
