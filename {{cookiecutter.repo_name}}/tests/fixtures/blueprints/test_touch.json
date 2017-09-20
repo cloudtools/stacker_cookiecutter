@@ -1,0 +1,8 @@
+{
+    "Description": "touch waits for nothing and returns quickly",
+    "Resources": {
+        "touchNothing": {
+            "Type": "AWS::CloudFormation::WaitConditionHandle"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+# this is an minimal `stack config` file.
+
+# the stacks key accepts a list of stack declarations.
+stacks:
+
+  # this is an example minimal stack.
+  # the 'name' and 'class_path' keys are required.
+  # the 'name' value must be unique.
+  # the 'class_path' and points at a Python stacker "blueprint" class.
+  - name: touch-nothing
+    class_path: blueprints.touch.Touch
+
+    # in this case, if you look in the "blueprints" directory at the file "touch.py"
+    # you will see a Python class called "Touch".
+
+    # when we execute stacker with this `stack config`, it will automatically run the
+    # blueprint code to produce a CloudFormation JSON template, upload it to s3, and
+    # trigger a CloudFormation create/update.
