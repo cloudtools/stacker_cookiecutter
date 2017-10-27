@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# automatically generate test fixture files should not be committed.
+*-result
+
 # C extensions
 *.so
 
