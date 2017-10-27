@@ -3,7 +3,8 @@ stacker_cookiecutter
 
 A `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ (project template) for creating a barebone `stacker <https://github.com/remind101/stacker#stacker>`_ project
 
-Note: You do not have to setup your project this way.
+Note:
+ You do not have to setup your project this way.
 
 Requirements
 ============
