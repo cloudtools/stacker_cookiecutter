@@ -5,6 +5,12 @@
 # http://stacker.readthedocs.io/en/latest/config.html#namespace-delimiter
 namespace: ${namespace}
 
+# The bucket where stacker will store cloudformation templates that it
+# generates:
+# http://stacker.readthedocs.io/en/latest/config.html#s3-bucket
+
+stacker_bucket: {{cookiecutter.stacker_bucket}}
+
 # This sets the syspath to include the local path, which allows access to the
 # blueprints in the blueprints directory
 # http://stacker.readthedocs.io/en/latest/config.html#module-paths
