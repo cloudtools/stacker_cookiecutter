@@ -23,9 +23,16 @@ Usage
       .. code-block:: bash
 
           $ cookiecutter gh:remind101/stacker_cookiecutter
+          project_name [myproject]:
+          stacker_bucket [stacker-myproject]:
+          repo_name [myproject]:
+          description [stacker project for myproject]:
 
 This command will create a new stacker project in your present working
-directory.
+directory. Note: You should try to make sure that your *stacker_bucket*
+variable is something unique, since s3 buckets share a global namespace.  It
+will default to *stacker-${project_name}* but you can name it whatever you
+like, so long as it's unique.
 
 Project tree
 =================
@@ -54,7 +61,8 @@ Some notes about the files in this tree:
  See: http://stacker.readthedocs.io/en/latest/blueprints.html
 
 **tests/blueprints/test_touch.py**:
-  This is a tiny ``stacker blueprint`` test.
+  This is a tiny ``stacker blueprint`` test which only creates a simple
+  resource in cloudformation (a WaitCondition, which does nothing on its own).
 
   See: http://stacker.readthedocs.io/en/latest/blueprints.html#testing-blueprints
 
