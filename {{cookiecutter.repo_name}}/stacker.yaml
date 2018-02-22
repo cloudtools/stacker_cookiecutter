@@ -5,6 +5,11 @@
 # http://stacker.readthedocs.io/en/latest/config.html#namespace-delimiter
 namespace: ${namespace}
 
+# This sets the syspath to include the local path, which allows access to the
+# blueprints in the blueprints directory
+# http://stacker.readthedocs.io/en/latest/config.html#module-paths
+sys_path: .
+
 # the stacks key accepts a list of stack declarations.
 # http://stacker.readthedocs.io/en/latest/config.html#stacks
 stacks:
