@@ -1,6 +1,12 @@
 REGION=us-east-1
 
+
+PIPENV := $(shell command -v pipenv -h 2> /dev/null)
+
 setup:
+ifndef PIPENV
+	$(error "pipenv is not available, please install 'pip install pipenv'")
+endif
 	pipenv install
 
 test:
