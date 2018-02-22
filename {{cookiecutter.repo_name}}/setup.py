@@ -5,7 +5,6 @@ from setuptools import setup, find_packages
 src_dir = os.path.dirname(__file__)
 
 install_requires = [
-    'PyYAML>=3.11',
     'stacker',
     'stacker_blueprints',
 ]
