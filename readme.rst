@@ -29,10 +29,11 @@ Usage
           description [stacker project for myproject]:
 
 This command will create a new stacker project in your present working
-directory. Note: You should try to make sure that your *stacker_bucket*
-variable is something unique, since s3 buckets share a global namespace.  It
-will default to *stacker-${project_name}* but you can name it whatever you
-like, so long as it's unique.
+directory. 
+
+Note: You should try to make your ``stacker_bucket`` variable unique
+since S3 bucket names share a global namespace. It will default to
+``stacker-{{ project_name }}`` but you may choose any unique value.
 
 Project tree
 =================
