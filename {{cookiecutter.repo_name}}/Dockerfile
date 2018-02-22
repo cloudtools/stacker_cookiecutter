@@ -8,4 +8,4 @@ RUN python setup.py install
 
 COPY . /stacks
 
-RUN python setup.py install
+RUN python setup.py install > /dev/null

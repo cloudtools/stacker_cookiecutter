@@ -1,6 +1,12 @@
 # this is an minimal `stack config` file.
+# http://stacker.readthedocs.io/en/latest/config.html
+# 
+# The stacker namespace, provided by the environment file.
+# http://stacker.readthedocs.io/en/latest/config.html#namespace-delimiter
+namespace: ${namespace}
 
 # the stacks key accepts a list of stack declarations.
+# http://stacker.readthedocs.io/en/latest/config.html#stacks
 stacks:
 
   # this is an example minimal stack.

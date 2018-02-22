@@ -8,8 +8,6 @@ install_requires = [
     'PyYAML>=3.11',
     'stacker',
     'stacker_blueprints',
-    'awacs>=0.6.0',
-    'boto>=2.42'
 ]
 
 tests_require = (
