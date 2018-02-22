@@ -1,5 +1,3 @@
-.PHONY: test build stage prod dev
-
 REGION=us-east-1
 
 build:
@@ -8,5 +6,8 @@ build:
 test:
 	python setup.py nosetests
 
-{{cookiecutter.repo_name}}:
-	stacker build --region ${REGION} ${ARGS} conf/{{cookiecutter.repo_name}}/${ENV_NAME}.env {{cookiecutter.repo_name}}.yaml
+prod:
+	stacker build --region ${REGION} ${ARGS} conf/prod.env stacker.yaml
+
+dev:
+	stacker build --region ${REGION} ${ARGS} conf/dev.env stacker.yaml
