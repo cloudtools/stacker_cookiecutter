@@ -33,7 +33,7 @@ directory.
 
 Note: You should try to make your ``stacker_bucket`` variable unique
 since S3 bucket names share a global namespace. It will default to
-``stacker-{{ project_name }}`` but you may choose any unique value.
+``stacker-{{ cookiecutter.project_name }}`` but you may choose any unique value.
 
 Project tree
 =================
