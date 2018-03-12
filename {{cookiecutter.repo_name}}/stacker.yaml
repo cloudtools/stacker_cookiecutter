@@ -5,25 +5,23 @@
 # http://stacker.readthedocs.io/en/latest/config.html#namespace-delimiter
 namespace: ${namespace}
 
-# The bucket where stacker will store cloudformation templates that it
-# generates:
+# The bucket where stacker stores generated CloudFormation templates.
 # http://stacker.readthedocs.io/en/latest/config.html#s3-bucket
-
 stacker_bucket: {{cookiecutter.stacker_bucket}}
 
 # This sets the syspath to include the local path, which allows access to the
-# blueprints in the blueprints directory
+# blueprints in the blueprints directory.
 # http://stacker.readthedocs.io/en/latest/config.html#module-paths
 sys_path: .
 
-# the stacks key accepts a list of stack declarations.
+# The stacks key accepts a list of stack declarations.
 # http://stacker.readthedocs.io/en/latest/config.html#stacks
 stacks:
 
-  # this is an example minimal stack.
-  # the 'name' and 'class_path' keys are required.
-  # the 'name' value must be unique.
-  # the 'class_path' and points at a Python stacker "blueprint" class.
+  # This is an example minimal stack.
+  # The 'name' and 'class_path' keys are required.
+  # The 'name' value must be unique.
+  # The 'class_path' points at a Python stacker "blueprint" class.
   - name: touch-nothing
     class_path: blueprints.touch.Touch
 
