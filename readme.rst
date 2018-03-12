@@ -33,7 +33,7 @@ directory.
 
 Note: You should try to make your ``stacker_bucket`` variable unique
 since S3 bucket names share a global namespace. It will default to
-``stacker-{{ project_name }}`` but you may choose any unique value.
+``stacker-{{ cookiecutter.project_name }}`` but you may choose any unique value.
 
 Project tree
 =================
@@ -63,7 +63,7 @@ Some notes about the files in this tree:
 
 **tests/blueprints/test_touch.py**:
   This is a tiny ``stacker blueprint`` test which only creates a simple
-  resource in cloudformation (a WaitCondition, which does nothing on its own).
+  resource in CloudFormation (a WaitCondition, which does nothing on it's own).
 
   See: http://stacker.readthedocs.io/en/latest/blueprints.html#testing-blueprints
 
