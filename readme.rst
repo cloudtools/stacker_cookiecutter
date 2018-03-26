@@ -14,6 +14,7 @@ Requirements
 
 * Python 2.7 or 3.4+
 * `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/installation.html>`_
+* `pipenv <https://docs.pipenv.org/>`_
 
 Usage
 =====
@@ -69,7 +70,9 @@ Some notes about the files in this tree:
 Running a release
 ====================
 
-In this example we use a ``Makefile`` to save commands.
+In this example we use a ``Makefile`` to save commands. The commands will be
+ran using *pipenv* which will handle creating a virtualenv for you, as well
+as insuring that the correct packages are installed.
 
 To execute stacker using your dev environment, using the *--interactive* flag
 run::
