@@ -1,13 +1,26 @@
 REGION=us-east-1
 
-build:
-	docker build -t remind101/stacks .
+
+POETRY := $(shell command -v poetry 2> /dev/null)
+
+setup:
+ifndef POETRY
+	$(error "poetry is not available, please install 'pip install poetry'")
+endif
+	poetry install
 
 test:
-	python setup.py nosetests
+	poetry develop
+	poetry run python setup.py nosetests
 
-prod:
-	stacker build --region ${REGION} ${ARGS} conf/prod.env stacker.yaml
+prod: setup
+	poetry run stacker build --region ${REGION} ${ARGS} conf/prod.env stacker.yaml
 
-dev:
-	stacker build --region ${REGION} ${ARGS} conf/dev.env stacker.yaml
+dev: setup
+	poetry run stacker build --region ${REGION} ${ARGS} conf/dev.env stacker.yaml
+
+destroy-dev: setup
+	poetry run stacker destroy --region ${REGION} ${ARGS} conf/dev.env stacker.yaml
+
+destroy-prod: setup
+	poetry run stacker destroy --region ${REGION} ${ARGS} conf/prod.env stacker.yaml

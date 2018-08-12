@@ -1,5 +1,5 @@
 {{cookiecutter.project_name}}
-#############################
+####################
 
 A `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ (project template)
 for creating a barebone
@@ -14,6 +14,7 @@ Requirements
 
 * Python 2.7 or 3.4+
 * `cookiecutter <https://cookiecutter.readthedocs.io/en/latest/installation.html>`_
+* `poetry <https://poetry.eustace.io/>`_
 
 Usage
 =====
@@ -63,14 +64,16 @@ Some notes about the files in this tree:
 
 **tests/blueprints/test_touch.py**:
   This is a tiny ``stacker blueprint`` test which only creates a simple
-  resource in cloudformation (a WaitCondition, which does nothing on its own).
+  resource in CloudFormation (a WaitCondition, which does nothing on it's own).
 
   See: http://stacker.readthedocs.io/en/latest/blueprints.html#testing-blueprints
 
 Running a release
 ====================
 
-In this example we use a ``Makefile`` to save commands.
+In this example we use a ``Makefile`` to save commands.  The commands will be
+ran using **poetry** which will handle creating a virtualenv for you, as well
+as insuring that the correct packages are installed.
 
 To execute stacker using your dev environment, using the *--interactive* flag
 run::
