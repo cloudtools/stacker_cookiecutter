@@ -1,6 +1,7 @@
 {
     "project_name": "myproject",
-    "stacker_bucket": "stacker-{{cookiecutter.project_name}}",
+    "stacker_namespace": "{{ cookiecutter.project_name.strip().replace('_', '-').replace('.', '-') }}",
+    "stacker_bucket": "stacker-{{cookiecutter.stacker_namespace}}",
     "repo_name": "{{cookiecutter.project_name.lower().strip().replace(' ', '_').replace(':', '_').replace('-', '_').replace('!', '_')}}",
     "description": "stacker project for {{cookiecutter.repo_name}}"
 }
