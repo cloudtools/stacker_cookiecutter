@@ -3,7 +3,7 @@ stacker_cookiecutter
 
 A `Cookiecutter <https://github.com/audreyr/cookiecutter>`_ (project template)
 for creating a barebone
-`stacker <https://github.com/remind101/stacker#stacker>`_ project
+`stacker <https://github.com/cloudtools/stacker#stacker>`_ project
 
 Note:
  You do not have to setup your project this way, this is just meant as a
@@ -23,7 +23,7 @@ Usage
 
       .. code-block:: bash
 
-          $ cookiecutter gh:remind101/stacker_cookiecutter
+          $ cookiecutter gh:cloudtools/stacker_cookiecutter
           project_name [myproject]:
           stacker_bucket [stacker-myproject]:
           repo_name [myproject]:
