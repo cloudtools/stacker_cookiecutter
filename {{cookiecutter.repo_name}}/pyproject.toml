@@ -6,7 +6,7 @@ authors = []
 
 [tool.poetry.dependencies]
 python = "*"
-stacker_blueprints = { git = "https://github.com/cloudtools/stacker_blueprints.git" }
+stacker_blueprints = "^1.0.8"
 
 [tool.poetry.dev-dependencies]
 nose = "^1.3"
